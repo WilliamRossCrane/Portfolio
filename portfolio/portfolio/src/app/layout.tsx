@@ -4,7 +4,7 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans"})
-const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-sans", weight: ["400"]})
+const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-serif", weight: ["400"]})
 
 export const metadata: Metadata = {
   title: "My Portfolio",
