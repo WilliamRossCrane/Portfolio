@@ -3,7 +3,7 @@ import Image from "next/image";
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 
 export const HeroSection = () => {
-  return 
+  return (
     <div>
       <div className="container">
         <Image src={memojiImage} alt="Person peeking from behind laptop" />
@@ -27,5 +27,6 @@ export const HeroSection = () => {
           </button>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
