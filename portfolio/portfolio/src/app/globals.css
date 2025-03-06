@@ -11,3 +11,9 @@
         @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/20 shadow-[0_0_80px_inset] shadow-emerald-300/20;
     }
 }
+
+@layer utilities {
+    .container {
+        @apply lg:max-w-5xl;
+    }
+}
