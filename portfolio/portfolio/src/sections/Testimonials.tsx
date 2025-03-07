@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SectionHeader } from "@/components/SectionHeader";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -41,11 +42,7 @@ const testimonials = [
 export const TestimonialsSection = () => {
   return (
   <div>
-    <p>Happy Clients</p>
-    <h2>What Clients Say about Me</h2>
-    <p>
-      Don't just take my word for it. See what my clients have to say about my work.
-    </p>
+    <SectionHeader eyebrow="Happy Clients" title="What Clients Say about" description="Don't just take my word for it. See what my clients have to say about my work." />
     <div>
     {testimonials.map((testimonial) => (
         <div key={testimonial.name}>
