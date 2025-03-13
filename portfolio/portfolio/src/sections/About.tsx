@@ -12,6 +12,7 @@ import GithubIcon from '@/assets/icons/github.svg';
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from  "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import { CardHeader } from "@/components/CardHeader";
 
 const toolboxItems = [
   {
@@ -73,21 +74,25 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="pb-96">
+    <div className="py-20">
+      <div className="container">
       <SectionHeader
         eyebrow="About Me" 
         title="A Glimpse Into My World" 
         description="Learn more about who I am, why I do, and what inspires me"
       />
 
-      <div>
-        <Card>
-          <StarIcon />
-          <h3>My Reads</h3>
-          <p>Explore the books shaping my perspectives.</p>
-        </Card>
-      </div>
-      <Image src={bookImage} alt="Book cover" />
+      <div className="mt-20">
+      
+      <Card className="h-[320px]">
+  <CardHeader title="My Reads" description="Explore the books shaping my perspectives." />
+  <div className="w-40 mx-auto mt-8">
+    <Image 
+      src={bookImage} 
+      alt="Book cover"
+    />
+  </div>
+</Card>
       
       <Card>
         <div>
@@ -127,5 +132,7 @@ export const AboutSection = () => {
       </Card>
 
     </div>
+    </div>
+  </div>
   );
 };
