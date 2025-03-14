@@ -25,13 +25,13 @@ const toolboxItems = [
 ];
 
 const hobbies = [
-  { title: "Painting", emoji: "" },
-  { title: "Photography", emoji: "" },
-  { title: "Gaming", emoji: "" },
-  { title: "Hiking", emoji: "" },
-  { title: "Music", emoji: "" },
-  { title: "Fitness", emoji: "" },
-  { title: "Reading", emoji: "" },
+  { title: "Painting", emoji: "🎨" },
+  { title: "Photography", emoji: "📷" },
+  { title: "Gaming", emoji: "🎮" },
+  { title: "Hiking", emoji: "🥾" },
+  { title: "Music", emoji: "🎵" },
+  { title: "Fitness", emoji: "💪" },
+  { title: "Reading", emoji: "📚" },
 ];
 
 export const AboutSection = () => {
@@ -44,7 +44,7 @@ export const AboutSection = () => {
           description="Learn more about who I am, why I do, and what inspires me"
         />
 
-        <div className="mt-20">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="h-[320px]">
             <CardHeader
               title="My Reads"
@@ -62,27 +62,30 @@ export const AboutSection = () => {
               className="px-6 pt-6"
             />
             <ToolboxItems items={toolboxItems} />
-            <ToolboxItems items={toolboxItems} />
           </Card>
 
           <Card>
-          <CardHeader
+            <CardHeader
               title="Beyond the Code"
               description="Explore my interests and hobbies beyond the digital realm."
             />
-            <div>
+            <div className="grid grid-cols-2 gap-4 mt-4">
               {hobbies.map((hobby) => (
-                <div key={hobby.title}>
+                <div key={hobby.title} className="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5">
+                  <span className="text-xl">{hobby.emoji}</span>
                   <span>{hobby.title}</span>
-                  <span>{hobby.emoji}</span>
                 </div>
               ))}
             </div>
           </Card>
 
           <Card>
-            <Image src={mapImage} alt="map" />
-            <Image src={smileMemoji} alt="Smiling memoji" />
+            <div className="relative h-full">
+              <Image src={mapImage} alt="map" className="w-full h-auto" />
+              <div className="absolute bottom-4 right-4 w-24 h-24">
+                <Image src={smileMemoji} alt="Smiling memoji" />
+              </div>
+            </div>
           </Card>
         </div>
       </div>
