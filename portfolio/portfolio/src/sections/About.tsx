@@ -44,7 +44,7 @@ export const AboutSection = () => {
           description="Learn more about who I am, why I do, and what inspires me"
         />
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-20 flex flexx-col gap-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="h-[320px]">
             <CardHeader
               title="My Reads"
@@ -61,7 +61,8 @@ export const AboutSection = () => {
               description="Explore the technologies and tool I use to create exceptional digital experiences."
               className="px-6 pt-6"
             />
-            <ToolboxItems items={toolboxItems} />
+            <ToolboxItems items={toolboxItems} className="mt-6"/>
+            <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2"/>
           </Card>
 
           <Card>
