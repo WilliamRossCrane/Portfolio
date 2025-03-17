@@ -25,13 +25,13 @@ const toolboxItems = [
 ];
 
 const hobbies = [
-  { title: "Painting", emoji: "🎨" },
-  { title: "Photography", emoji: "📷" },
-  { title: "Gaming", emoji: "🎮" },
-  { title: "Hiking", emoji: "🥾" },
-  { title: "Music", emoji: "🎵" },
-  { title: "Fitness", emoji: "💪" },
-  { title: "Reading", emoji: "📚" },
+  { title: "Painting", emoji: "🎨", left: "5%", top: "5%", },
+  { title: "Photography", emoji: "📷", left: "50%", top: "5%",  },
+  { title: "Hiking", emoji: "🥾", left: "35%", top: "40%",  },
+  { title: "Gaming", emoji: "🎮", left: "10%", top: "35%",  },
+  { title: "Music", emoji: "🎵", left: "70%", top: "45%",  },
+  { title: "Fitness", emoji: "💪", left: "5%", top: "65%",  },
+  { title: "Reading", emoji: "📚", left: "45%", top: "70%",  },
 ];
 
 export const AboutSection = () => {
@@ -65,16 +65,22 @@ export const AboutSection = () => {
             <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2"/>
           </Card>
 
-          <Card>
+          <Card className="h-[320px] p-0 flex-col">
             <CardHeader
               title="Beyond the Code"
               description="Explore my interests and hobbies beyond the digital realm."
+              className="px-6 py-6"
             />
-            <div className="grid grid-cols-2 gap-4 mt-4">
+            <div className="relative flex-1">
               {hobbies.map((hobby) => (
-                <div key={hobby.title} className="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5">
+                <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                  style={{
+                    left: hobby.left,
+                    top: hobby.top,
+                  }}
+                >
                   <span className="text-xl">{hobby.emoji}</span>
-                  <span>{hobby.title}</span>
+                  <span className="font-medium text-gray-950">{hobby.title}</span>
                 </div>
               ))}
             </div>
