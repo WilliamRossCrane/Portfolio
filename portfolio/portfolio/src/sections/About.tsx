@@ -86,11 +86,11 @@ export const AboutSection = () => {
             </div>
           </Card>
 
-          <Card>
+          <Card className="h-[320px] p-0 relative">
             <div className="relative h-full">
-              <Image src={mapImage} alt="map" className="w-full h-auto" />
-              <div className="absolute bottom-4 right-4 w-24 h-24">
-                <Image src={smileMemoji} alt="Smiling memoji" />
+              <Image src={mapImage} alt="map" className="w-full h-full object-cover object-left-top" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-fullafter:outline-gray-950/30">
+                <Image src={smileMemoji} alt="Smiling memoji" className="size-20"/>
               </div>
             </div>
           </Card>
