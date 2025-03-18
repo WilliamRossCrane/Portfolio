@@ -36,7 +36,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"
@@ -45,18 +45,18 @@ export const AboutSection = () => {
         />
 
         <div className="mt-20 flex flexx-col gap-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-8">
-          <Card className="h-[320px] md:col-span-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-8 lg:grid-cols-3">
+          <Card className="h-[320px] md:col-span-2 lg:col-span-1">
             <CardHeader
               title="My Reads"
               description="Explore the books shaping my perspectives."
             />
-            <div className="w-40 mx-auto mt-2 md:mt-0">
+            <div className="w-40 mx-auto mt-2">
               <Image src={bookImage} alt="Book cover" />
             </div>
           </Card>
 
-          <Card className="h-[320px] md:col-span-3">
+          <Card className="h-[320px] md:col-span-3 lg:col-span-2">
             <CardHeader
               title="My Toolbox"
               description="Explore the technologies and tool I use to create exceptional digital experiences."
@@ -67,7 +67,8 @@ export const AboutSection = () => {
           </Card>
           </div>
 
-          <Card className="h-[320px] p-0 flex-col">
+          <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
+          <Card className="h-[320px] p-0 flex-col md:col-span-3 lg:col-span-2">
             <CardHeader
               title="Beyond the Code"
               description="Explore my interests and hobbies beyond the digital realm."
@@ -88,7 +89,7 @@ export const AboutSection = () => {
             </div>
           </Card>
 
-          <Card className="h-[320px] p-0 relative">
+          <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
             <div className="relative h-full">
               <Image src={mapImage} alt="map" className="w-full h-full object-cover object-left-top" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-fullafter:outline-gray-950/30">
@@ -96,6 +97,7 @@ export const AboutSection = () => {
               </div>
             </div>
           </Card>
+          </div>
       </div>
       </div>
     </div>
