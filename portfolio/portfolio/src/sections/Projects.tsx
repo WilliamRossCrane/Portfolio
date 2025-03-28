@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
       <div className="container">
         {/* Section header with eyebrow, title, and description */}
         <SectionHeader 
-          eyebrow="Real-world Results" 
+          eyebrow="Tangible Achievements" 
           title="Featured Projects" 
           description="See all my little digital babies in action... *cough* *cough*... I mean, my professional projects!"
         />

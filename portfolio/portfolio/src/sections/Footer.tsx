@@ -2,19 +2,19 @@ import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 
 const footerLinks = [
   {
-    title: 'Youtube',
+    title: 'Phone',
     href: '#',
   },
   {
-    title: 'Twitter',
-    href: '#',
-  },
-  {
-    title: 'Instagram',
+    title: 'Email',
     href: '#',
   },
   {
     title: 'LinkedIn',
+    href: '#',
+  },
+  {
+    title: 'GitHub',
     href: '#',
   },
 ];
