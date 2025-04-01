@@ -101,15 +101,17 @@ export const AboutSection = () => {
             {/* Location Map Card */}
             <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <div className="relative h-full">
-                {/* Background map image */}
+                {/* Main background map image */}
                 <Image 
                   src={mapImage} 
                   alt="map" 
-                  className="w-full h-full object-cover object-top scale-150 md:scale-[1.75]"
-                />
-                {/* Memoji overlay positioned on the map */}
-                <div className="absolute top-[55%] md:top-[65%] lg:top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400">
-                  <Image src={smileMemoji} alt="Smiling memoji" className="size-20"/>
+                  className="w-full h-full object-cover object-top scale-150 md:scale-[1.75] relative z-10"
+                />  
+                
+                {/* Static background circle and memoji and ping animation*/}
+                <div className="absolute top-[55%] md:top-[65%] lg:top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 z-30">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 animate-ping [animation-duration:2s]"></div>
+                  <Image src={smileMemoji} alt="Smiling memoji" className="size-20 relative z-40"/>
                 </div>
               </div>
             </Card>
