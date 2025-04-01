@@ -1,13 +1,20 @@
+// This component is not currently being used
+
 import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
+import { Card } from "@/components/Card";
+
+// Import testimonial images
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
-import grainImage from "@/assets/images/grain.jpg";
-import { Card } from "@/components/Card";
 
+// Background grain image
+import grainImage from "@/assets/images/grain.jpg";
+
+// Array of testimonials with client details
 const testimonials = [
   {
     name: "Alex Turner",
@@ -41,9 +48,11 @@ const testimonials = [
   },
 ];
 
+// Testimonials section component
 export const TestimonialsSection = () => {
   return (
     <div className="py-16 lg:py-24">
+      {/* Section header with title and description */}
       <SectionHeader
         eyebrow="Happy Clients"
         title="What Clients Say About Me"
@@ -51,21 +60,30 @@ export const TestimonialsSection = () => {
       />
 
       <div className="mt-16 lg:mt-24 relative">
+        {/* Testimonials list, displayed in a horizontal scrollable grid */}
         <div className="grid grid-flow-col auto-cols-max gap-8 overflow-x-auto no-scrollbar md:overflow-x-visible lg:max-w-4xl mx-auto [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           {testimonials.map((testimonial) => (
             <Card 
               key={testimonial.name} 
               className="w-[300px] md:w-[340px] lg:w-[400px] shrink-0 p-6 md:p-8"
             >
+              {/* Testimonial content */}
               <div className="flex gap-4 items-center">
+                {/* Avatar image */}
                 <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
-                  <Image src={testimonial.avatar} alt={testimonial.name} className="max-h-full" />
+                  <Image 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name} 
+                    className="max-h-full" 
+                  />
                 </div>
+                {/* Name and position */}
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
                   <div className="text-sm text-white/40">{testimonial.position}</div>
                 </div>
               </div>
+              {/* Testimonial text */}
               <p className="mt-4 md:mt-6 text-sm md:text-base">{testimonial.text}</p>
             </Card>
           ))}
@@ -74,4 +92,3 @@ export const TestimonialsSection = () => {
     </div>
   );
 };
-
