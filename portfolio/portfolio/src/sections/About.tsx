@@ -1,13 +1,11 @@
 // Import necessary components and assets
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import { TechIcon } from "@/components/TechIcon";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import Image from "next/image";
 
 // Import icons and images
-import StarIcon from "@/assets/icons/star.svg";
 import bookImage from "@/assets/images/book-cover.png";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
@@ -69,11 +67,11 @@ export const AboutSection = () => {
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="My Toolbox"
-                description="Explore the technologies and tools I use to create exceptional digital experiences."
+                description="Explore the current technologies and tools I use to develop my portfolio."
               />
-              <ToolboxItems items={toolboxItems} />
+              <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:30s]"/>
               {/* Second row of toolbox items with slight position shift */}
-              <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2" />
+              <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:15s]" />
             </Card>
           </div>
 
