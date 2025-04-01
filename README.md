@@ -21,7 +21,6 @@ A fully responsive and visually stunning portfolio built with modern front-end t
 - **🎭 Hero Section** – Animated introduction with orbital elements  
 - **🖼️ Featured Projects** – Showcase of portfolio work  
 - **📜 Tape Section** – Continuous animated design element  
-- **💬 Testimonials** – Reviews from clients and colleagues  
 - **👤 About Section** – Personal and professional details  
 - **📩 Call to Action** – Contact form and links  
 - **⚓ Footer** – Additional navigation and social links  

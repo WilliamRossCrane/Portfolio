@@ -30,13 +30,13 @@ const toolboxItems = [
 
 // Define hobbies with their respective emoji and positioning styles
 const hobbies = [
-  { title: "Painting", emoji: "🎨", positions: "left-[5%] md:left-[15%] lg:left-[5%] top-[100%] md:top-[70%] lg:top-[60%]" },
-  { title: "Photography", emoji: "📷", positions: "left-[55%] md:left-[60%] lg:left-[50%] top-[100%] md:top-[70%] lg:top-[60%]" },
-  { title: "Hiking", emoji: "🥾", positions: "left-[35%] md:left-[10%] lg:left-[35%] top-[200%] md:top-[140%] lg:top-[130%]" },
+  { title: "Singing", emoji: "🎤", positions: "left-[5%] md:left-[15%] lg:left-[5%] top-[100%] md:top-[70%] lg:top-[60%]" },
+  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] md:left-[60%] lg:left-[50%] top-[100%] md:top-[70%] lg:top-[60%]" },
+  { title: "Coding", emoji: "💻", positions: "left-[35%] md:left-[10%] lg:left-[35%] top-[200%] md:top-[140%] lg:top-[130%]" },
   { title: "Gaming", emoji: "🎮", positions: "left-[10%] md:left-[20%] lg:left-[10%] top-[290%] md:top-[225%] lg:top-[110%]" },
   { title: "Music", emoji: "🎵", positions: "left-[65%] md:left-[65%] lg:left-[70%] top-[290%] md:top-[150%] lg:top-[110%]" },
   { title: "Fitness", emoji: "💪", positions: "left-[5%] md:left-[15%] lg:left-[5%] top-[425%] md:top-[2250%] lg:top-[180%]" },
-  { title: "Reading", emoji: "📚", positions: "left-[50%] md:left-[50%] lg:left-[45%] top-[450%] md:top-[250%] lg:top-[200%]" },
+  { title: "Grappling", emoji: "🤼", positions: "left-[50%] md:left-[50%] lg:left-[45%] top-[450%] md:top-[250%] lg:top-[200%]" },
 ];
 
 // About section component

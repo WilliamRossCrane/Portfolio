@@ -55,9 +55,9 @@ export const ProjectsSection = () => {
       <div className="container">
         {/* Section header with eyebrow, title, and description */}
         <SectionHeader 
-          eyebrow="Tangible Achievements" 
+          eyebrow="Projects I've Built" 
           title="Featured Projects" 
-          description="See all my little digital babies in action... *cough* *cough*... I mean, my professional projects!"
+          description="A collection of my polished and completed applications."
         />
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
           {/* Mapping through portfolio projects to display each */}
