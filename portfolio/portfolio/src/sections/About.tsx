@@ -1,9 +1,12 @@
 // Import necessary components and assets
+"use client";
+import { useRef } from "react"; 
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // Import icons and images
 import bookImage from "@/assets/images/book-cover.png";
@@ -39,6 +42,7 @@ const hobbies = [
 
 // About section component
 export const AboutSection = () => {
+  const constrainRef = useRef(null);
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
@@ -84,16 +88,18 @@ export const AboutSection = () => {
                 description="Explore my interests and hobbies beyond the digital realm."
                 className="px-6 py-6"
               />
-              <div className="absolute inset-x-0 bottom-0 top-24">
+              <div className="absolute inset-x-0 bottom-0 top-24" ref={constrainRef}>
                 {/* Display hobbies dynamically */}
                 {hobbies.map((hobby) => (
-                  <div 
+                  <motion.div
                     key={hobby.title} 
                     className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions}`}
+                    drag
+                    dragConstraints={constrainRef}
                   >
                     <span className="text-xl">{hobby.emoji}</span>
                     <span className="font-medium text-gray-950">{hobby.title}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
