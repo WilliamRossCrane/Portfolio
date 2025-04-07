@@ -82,33 +82,31 @@ export const AboutSection = () => {
           {/* Additional grid layout for hobbies and map */}
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             {/* Hobbies Card */}
-            <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
-              {/* Custom layout for this specific card */}
-              <div className="flex flex-col h-full">
-                <CardHeader
-                  title="Beyond the Code"
-                  description="Explore my interests and hobbies beyond the digital realm."
-                  className="px-6 py-6"
-                />
-                
-                {/* Container for the draggable items that fills the remaining space */}
-                <div className="relative flex-grow" ref={constrainRef}>
-                  {/* Display hobbies dynamically */}
-                  {hobbies.map((hobby) => (
-                    <motion.div
-                      key={hobby.title} 
-                      className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions}`}
-                      drag
-                      dragConstraints={constrainRef}
-                      dragMomentum={false}
-                      dragElastic={0.2}
-                      whileDrag={{ scale: 1.05, zIndex: 10 }}
-                    >
-                      <span className="text-xl">{hobby.emoji}</span>
-                      <span className="font-medium text-gray-950">{hobby.title}</span>
-                    </motion.div>
-                  ))}
-                </div>
+            <Card className="h-[320px] p-0 flex-col md:col-span-3 lg:col-span-2">
+              {/* The content below will be wrapped in Card's inner "relative z-10" div */}
+              <CardHeader
+                title="Beyond the Code"
+                description="Explore my interests and hobbies beyond the digital realm."
+                className="px-6 py-6"
+              />
+              
+              {/* This container will be positioned relative to Card's inner wrapper */}
+              <div className="absolute inset-0 top-24 bottom-0" ref={constrainRef}>
+                {/* Display hobbies dynamically */}
+                {hobbies.map((hobby) => (
+                  <motion.div
+                    key={hobby.title} 
+                    className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions}`}
+                    drag
+                    dragConstraints={constrainRef}
+                    dragMomentum={false}
+                    dragElastic={0.2}
+                    whileDrag={{ scale: 1.05, zIndex: 10 }}
+                  >
+                    <span className="text-xl">{hobby.emoji}</span>
+                    <span className="font-medium text-gray-950">{hobby.title}</span>
+                  </motion.div>
+                ))}
               </div>
             </Card>
 
