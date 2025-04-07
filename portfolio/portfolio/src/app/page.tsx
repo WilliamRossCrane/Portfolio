@@ -13,7 +13,7 @@ export default function Home() {
       <div id="hero">
         <HeroSection />
       </div>
-      <div id="projects">
+      <div id="projects" className="scroll-mt-[95px]">
         <ProjectsSection />
       </div>
       <TapeSection />
