@@ -82,13 +82,13 @@ export const AboutSection = () => {
           {/* Additional grid layout for hobbies and map */}
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             {/* Hobbies Card */}
-            <Card className="h-[320px] p-0 flex-col md:col-span-3 lg:col-span-2">
+            <Card className="h-[320px] p-0 flex-col md:col-span-3 lg:col-span-2 relative">
               <CardHeader
                 title="Beyond the Code"
                 description="Explore my interests and hobbies beyond the digital realm."
                 className="px-6 py-6"
               />
-              <div className="absolute inset-0 pt-24" ref={constrainRef}>
+              <div className="absolute inset-0 top-24 bottom-0" ref={constrainRef}>
                 {/* Display hobbies dynamically */}
                 {hobbies.map((hobby) => (
                   <motion.div
