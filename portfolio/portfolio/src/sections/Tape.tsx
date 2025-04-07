@@ -21,7 +21,7 @@ export const TapeSection = () => {
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 -rotate-3 -mx-1">
         <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           {/* Flex container for scrolling text */}
-          <div className="flex gap-4 pr-4 py-3 w-full animate-move-left">
+          <div className="flex gap-4 pr-4 py-3 w-full [animation:move-left_5s_linear_infinite] md:[animation:move-left_15s_linear_infinite]">
             {/* Creating multiple instances of the scrolling text */}
             {[...new Array(4)].fill(0).map((_, idx) => (
               <div key={idx} className="flex shrink-0 gap-4 items-center">
