@@ -31,13 +31,13 @@ const toolboxItems = [
 
 // Define hobbies with their respective emoji and positioning styles
 const hobbies = [
-  { title: "Singing", emoji: "🎤", positions: "left-[5%] md:left-[15%] lg:left-[5%] top-[30%] md:top-[25%] lg:top-[30%]" },
-  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] md:left-[60%] lg:left-[50%] top-[35%] md:top-[30%] lg:top-[35%]" },
-  { title: "One Piece", emoji: "😊", positions: "left-[35%] md:left-[10%] lg:left-[35%] top-[50%] md:top-[45%] lg:top-[50%]" },
-  { title: "Gaming", emoji: "🎮", positions: "left-[10%] md:left-[20%] lg:left-[10%] top-[65%] md:top-[60%] lg:top-[60%]" },
-  { title: "Music", emoji: "🎵", positions: "left-[65%] md:left-[65%] lg:left-[70%] top-[60%] md:top-[55%] lg:top-[65%]" },
-  { title: "Fitness", emoji: "💪", positions: "left-[20%] md:left-[15%] lg:left-[20%] top-[80%] md:top-[75%] lg:top-[80%]" },
-  { title: "Grappling", emoji: "🤼", positions: "left-[50%] md:left-[50%] lg:left-[45%] top-[75%] md:top-[70%] lg:top-[75%]" },
+  { title: "Singing", emoji: "🎤", positions: "left-[5%] top-[5%]" },
+  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] top-[15%]" },
+  { title: "One Piece", emoji: "😊", positions: "left-[30%] top-[30%]" },
+  { title: "Gaming", emoji: "🎮", positions: "left-[10%] top-[45%]" },
+  { title: "Music", emoji: "🎵", positions: "left-[65%] top-[50%]" },
+  { title: "Fitness", emoji: "💪", positions: "left-[20%] top-[65%]" },
+  { title: "Grappling", emoji: "🤼", positions: "left-[50%] top-[80%]" },
 ];
 
 // About section component
@@ -82,33 +82,33 @@ export const AboutSection = () => {
           {/* Additional grid layout for hobbies and map */}
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             {/* Hobbies Card */}
-            <Card className="h-[320px] p-0 flex-col md:col-span-3 lg:col-span-2 relative">
-              <CardHeader
-                title="Beyond the Code"
-                description="Explore my interests and hobbies beyond the digital realm."
-                className="px-6 py-6"
-              />
-              <div className="absolute inset-0" ref={constrainRef}>
-                {/* Display hobbies dynamically */}
-                {hobbies.map((hobby) => (
-                  <motion.div
-                    key={hobby.title} 
-                    className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions}`}
-                    drag
-                    dragConstraints={{
-                      top: 96, 
-                      bottom: 0,
-                      left: 0,
-                      right: 0
-                    }}
-                    dragMomentum={false}
-                    dragElastic={0.2}
-                    whileDrag={{ scale: 1.05, zIndex: 50 }}
-                  >
-                    <span className="text-xl">{hobby.emoji}</span>
-                    <span className="font-medium text-gray-950">{hobby.title}</span>
-                  </motion.div>
-                ))}
+            <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
+              {/* Custom layout for this specific card */}
+              <div className="flex flex-col h-full">
+                <CardHeader
+                  title="Beyond the Code"
+                  description="Explore my interests and hobbies beyond the digital realm."
+                  className="px-6 py-6"
+                />
+                
+                {/* Container for the draggable items that fills the remaining space */}
+                <div className="relative flex-grow" ref={constrainRef}>
+                  {/* Display hobbies dynamically */}
+                  {hobbies.map((hobby) => (
+                    <motion.div
+                      key={hobby.title} 
+                      className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions}`}
+                      drag
+                      dragConstraints={constrainRef}
+                      dragMomentum={false}
+                      dragElastic={0.2}
+                      whileDrag={{ scale: 1.05, zIndex: 10 }}
+                    >
+                      <span className="text-xl">{hobby.emoji}</span>
+                      <span className="font-medium text-gray-950">{hobby.title}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </Card>
 
