@@ -88,14 +88,19 @@ export const AboutSection = () => {
                 description="Explore my interests and hobbies beyond the digital realm."
                 className="px-6 py-6"
               />
-              <div className="absolute inset-0 top-24 bottom-0" ref={constrainRef}>
+              <div className="absolute inset-0" ref={constrainRef}>
                 {/* Display hobbies dynamically */}
                 {hobbies.map((hobby) => (
                   <motion.div
                     key={hobby.title} 
                     className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions}`}
                     drag
-                    dragConstraints={constrainRef}
+                    dragConstraints={{
+                      top: 96, 
+                      bottom: 0,
+                      left: 0,
+                      right: 0
+                    }}
                     dragMomentum={false}
                     dragElastic={0.2}
                     whileDrag={{ scale: 1.05, zIndex: 50 }}
