@@ -31,13 +31,13 @@ const toolboxItems = [
 
 // Define hobbies with their respective emoji and positioning styles
 const hobbies = [
-  { title: "Singing", emoji: "🎤", positions: "left-[5%] top-[10%]" },
-  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] top-[15%]" },
-  { title: "One Piece", emoji: "😊", positions: "left-[30%] top-[35%]" },
-  { title: "Gaming", emoji: "🎮", positions: "left-[10%] top-[55%]" },
-  { title: "Music", emoji: "🎵", positions: "left-[65%] top-[45%]" },
-  { title: "Fitness", emoji: "💪", positions: "left-[20%] top-[75%]" },
-  { title: "Grappling", emoji: "🤼", positions: "left-[50%] top-[65%]" },
+  { title: "Singing", emoji: "🎤", positions: "left-[5%] md:left-[15%] lg:left-[5%] top-[30%] md:top-[25%] lg:top-[30%]" },
+  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] md:left-[60%] lg:left-[50%] top-[35%] md:top-[30%] lg:top-[35%]" },
+  { title: "One Piece", emoji: "😊", positions: "left-[35%] md:left-[10%] lg:left-[35%] top-[50%] md:top-[45%] lg:top-[50%]" },
+  { title: "Gaming", emoji: "🎮", positions: "left-[10%] md:left-[20%] lg:left-[10%] top-[65%] md:top-[60%] lg:top-[60%]" },
+  { title: "Music", emoji: "🎵", positions: "left-[65%] md:left-[65%] lg:left-[70%] top-[60%] md:top-[55%] lg:top-[65%]" },
+  { title: "Fitness", emoji: "💪", positions: "left-[20%] md:left-[15%] lg:left-[20%] top-[80%] md:top-[75%] lg:top-[80%]" },
+  { title: "Grappling", emoji: "🤼", positions: "left-[50%] md:left-[50%] lg:left-[45%] top-[75%] md:top-[70%] lg:top-[75%]" },
 ];
 
 // About section component
@@ -88,7 +88,7 @@ export const AboutSection = () => {
                 description="Explore my interests and hobbies beyond the digital realm."
                 className="px-6 py-6"
               />
-              <div className="absolute inset-x-0 bottom-0 top-24" ref={constrainRef}>
+              <div className="absolute inset-0 pt-24" ref={constrainRef}>
                 {/* Display hobbies dynamically */}
                 {hobbies.map((hobby) => (
                   <motion.div
