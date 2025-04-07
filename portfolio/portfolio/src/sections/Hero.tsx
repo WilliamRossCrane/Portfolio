@@ -75,7 +75,7 @@ export const HeroSection = () => {
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
             </div>
-            <div className="text-sm font-medium">Hi, I'm William 🏳️‍🌈</div>
+            <div className="text-sm font-medium">Hi, I&apos;m William 🏳️‍🌈</div>
           </div>
         </div>
 
@@ -85,8 +85,8 @@ export const HeroSection = () => {
             Welcome! <br /> This Is My Portfolio.
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I'm passionate about technology with a degree in Software Development.  
-            Currently, I'm expanding my skills and building a variety of projects.
+            I&apos;m passionate about technology with a degree in Software Development.  
+            Currently, I&apos;m expanding my skills and building a variety of projects.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
           >
             <span>👋</span>
-            <span className="font-semibold">Let's Connect</span>
+            <span className="font-semibold">Let&apos;s Connect</span>
           </a>
         </div>
       </div> 
