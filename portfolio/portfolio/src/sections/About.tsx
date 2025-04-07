@@ -73,7 +73,7 @@ export const AboutSection = () => {
                 title="My Toolbox"
                 description="Explore the current technologies and tools I use to develop my portfolio."
               />
-              <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:30s]"/>
+              <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:20s]"/>
               {/* Second row of toolbox items with slight position shift */}
               <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:15s]" />
             </Card>
