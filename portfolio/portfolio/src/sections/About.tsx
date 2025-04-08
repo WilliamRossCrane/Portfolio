@@ -31,12 +31,12 @@ const toolboxItems = [
 
 // Define hobbies with their respective emoji and positioning styles
 const hobbies = [
-  { title: "Singing", emoji: "🎤", positions: "left-[5%] top-[20%]" },
-  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] top-[30%]" },
+  { title: "Singing", emoji: "🎤", positions: "left-[5%] top-[15%]" },
+  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] top-[25%]" },
   { title: "One Piece", emoji: "😊", positions: "left-[30%] top-[40%]" },
-  { title: "Gaming", emoji: "🎮", positions: "left-[10%] top-[50%]" },
+  { title: "Gaming", emoji: "🎮", positions: "left-[10%] top-[55%]" },
   { title: "Music", emoji: "🎵", positions: "left-[65%] top-[60%]" },
-  { title: "Fitness", emoji: "💪", positions: "left-[20%] top-[70%]" },
+  { title: "Fitness", emoji: "💪", positions: "left-[20%] top-[75%]" },
   { title: "Grappling", emoji: "🤼", positions: "left-[50%] top-[80%]" },
 ];
 
@@ -83,30 +83,28 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             {/* Hobbies Card */}
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
-              <div className="h-full flex flex-col">
-                <CardHeader
-                  title="Beyond the Code"
-                  description="Explore my interests and hobbies beyond the digital realm."
-                />
-                
-                {/* This container will act as the drag constraint area */}
-                <div className="relative flex-1 -mt-2" ref={constrainRef}>
-                  {/* Display hobbies dynamically */}
-                  {hobbies.map((hobby) => (
-                    <motion.div
-                      key={hobby.title} 
-                      className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions} cursor-grab`}
-                      drag
-                      dragConstraints={constrainRef}
-                      dragMomentum={false}
-                      dragElastic={0.2}
-                      whileDrag={{ scale: 1.05, zIndex: 20, cursor: "grabbing" }}
-                    >
-                      <span className="text-xl">{hobby.emoji}</span>
-                      <span className="font-medium text-gray-950">{hobby.title}</span>
-                    </motion.div>
-                  ))}
-                </div>
+              <CardHeader
+                title="Beyond the Code"
+                description="Explore my interests and hobbies beyond the digital realm."
+              />
+              
+              {/* This container will act as the drag constraint area */}
+              <div className="relative h-[225px] mt-1" ref={constrainRef}>
+                {/* Display hobbies dynamically */}
+                {hobbies.map((hobby) => (
+                  <motion.div
+                    key={hobby.title} 
+                    className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions} cursor-grab`}
+                    drag
+                    dragConstraints={constrainRef}
+                    dragMomentum={false}
+                    dragElastic={0.2}
+                    whileDrag={{ scale: 1.05, zIndex: 20, cursor: "grabbing" }}
+                  >
+                    <span className="text-xl">{hobby.emoji}</span>
+                    <span className="font-medium text-gray-950">{hobby.title}</span>
+                  </motion.div>
+                ))}
               </div>
             </Card>
 
