@@ -89,7 +89,7 @@ export const AboutSection = () => {
               />
               
               {/* This container will act as the drag constraint area */}
-              <div className="relative h-[225px] mt-1" ref={constrainRef}>
+              <div className="relative h-[150px] -mt-1" ref={constrainRef}>
                 {/* Display hobbies dynamically */}
                 {hobbies.map((hobby) => (
                   <motion.div
