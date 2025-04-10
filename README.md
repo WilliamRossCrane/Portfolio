@@ -33,7 +33,7 @@ A fully responsive and visually stunning portfolio built with modern front-end t
 | **React**       | Component-based UI development               |
 | **TailwindCSS** | Utility-first CSS framework for styling      |
 | **Framer Motion** | Advanced animations & micro-interactions  |
-| **Vercel/GitHub Pages** | Deployment options                   |
+| **Vercel**      | Deployment Tool                  |
 
 ## 🏗️ Getting Started
 
@@ -64,16 +64,15 @@ Now you can open http://localhost:3000 in your browser to view the site.
 ```
 
 ## 🌍 Deployment
-This project has been deployed on **GitHub Pages**:  
-🔗 [View Live](https://WilliamRossCrane.github.io/portfolio/)
+This project has been deployed on **Vercel**:  
+🔗 [View Live](https://portfolio-ceftauck8-williamrosscranes-projects.vercel.app/)
 
 To build for production, run:  
 npm run build
 
 ## 🙏 Acknowledgements
-* 🎨 **Design Inspiration** – Personalfolio Template  
-* 📺 **Tutorials & Guidance** – Frontend Tribe  
-* 🔗 **Icons** – Various free icon libraries  
+* 🎨 **Design Inspiration** – Personalfolio Template (Figma)
+* 📺 **Tutorials & Guidance** – Frontend Tribe (Youtube) 
 
 ## 📄 License
 * This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.

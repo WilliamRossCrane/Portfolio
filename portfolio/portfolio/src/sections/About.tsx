@@ -31,13 +31,13 @@ const toolboxItems = [
 
 // Define hobbies with their respective emoji and positioning styles
 const hobbies = [
-  { title: "Singing", emoji: "🎤", positions: "left-[5%] top-[15%]" },
-  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] top-[25%]" },
-  { title: "One Piece", emoji: "😊", positions: "left-[30%] top-[40%]" },
-  { title: "Gaming", emoji: "🎮", positions: "left-[10%] top-[55%]" },
-  { title: "Music", emoji: "🎵", positions: "left-[65%] top-[60%]" },
-  { title: "Fitness", emoji: "💪", positions: "left-[20%] top-[75%]" },
-  { title: "Grappling", emoji: "🤼", positions: "left-[50%] top-[80%]" },
+  { title: "Singing", emoji: "🎤", positions: "left-[7%] top-[0%]" },
+  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] top-[5%]" },
+  { title: "One Piece", emoji: "😊", positions: "left-[30%] top-[20%]" },
+  { title: "Gaming", emoji: "🎮", positions: "left-[12%] top-[35%]" },
+  { title: "Music", emoji: "🎵", positions: "left-[65%] top-[45%]" },
+  { title: "Fitness", emoji: "💪", positions: "left-[20%] top-[70%]" },
+  { title: "Grappling", emoji: "🤼", positions: "left-[50%] top-[70%]" },
 ];
 
 // About section component
