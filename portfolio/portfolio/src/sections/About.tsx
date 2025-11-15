@@ -1,6 +1,6 @@
 // Import necessary components and assets
 "use client";
-import { useRef } from "react"; 
+import { useRef } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { CardHeader } from "@/components/CardHeader";
@@ -60,7 +60,7 @@ export const AboutSection = () => {
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
-                description="Explore the books shaping my perspectives."
+                description="The current book shaping my perspectives."
               />
               <div className="w-40 mx-auto mt-2">
                 <Image src={bookImage} alt="Book cover" />
@@ -73,9 +73,17 @@ export const AboutSection = () => {
                 title="My Toolbox"
                 description="Explore the current technologies and tools I use to develop my portfolio."
               />
-              <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:20s]"/>
+              <ToolboxItems
+                items={toolboxItems}
+                className=""
+                itemsWrapperClassName="animate-move-left [animation-duration:20s]"
+              />
               {/* Second row of toolbox items with slight position shift */}
-              <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:15s]" />
+              <ToolboxItems
+                items={toolboxItems}
+                className="mt-6"
+                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
+              />
             </Card>
           </div>
 
@@ -87,13 +95,13 @@ export const AboutSection = () => {
                 title="Beyond the Code"
                 description="Explore my interests and hobbies beyond the digital realm."
               />
-              
+
               {/* This container will act as the drag constraint area */}
               <div className="relative h-[150px] -mt-1" ref={constrainRef}>
                 {/* Display hobbies dynamically */}
                 {hobbies.map((hobby) => (
                   <motion.div
-                    key={hobby.title} 
+                    key={hobby.title}
                     className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions} cursor-grab`}
                     drag
                     dragConstraints={constrainRef}
@@ -102,7 +110,9 @@ export const AboutSection = () => {
                     whileDrag={{ scale: 1.05, zIndex: 20, cursor: "grabbing" }}
                   >
                     <span className="text-xl">{hobby.emoji}</span>
-                    <span className="font-medium text-gray-950">{hobby.title}</span>
+                    <span className="font-medium text-gray-950">
+                      {hobby.title}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -112,16 +122,20 @@ export const AboutSection = () => {
             <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <div className="relative h-full">
                 {/* Main background map image */}
-                <Image 
-                  src={mapImage} 
-                  alt="map" 
+                <Image
+                  src={mapImage}
+                  alt="map"
                   className="w-full h-full object-cover object-top scale-150 md:scale-[1.75] relative z-10"
-                />  
-                
+                />
+
                 {/* Static background circle and memoji and ping animation*/}
-                <div className="absolute top-[55%] md:top-[65%] lg:top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 z-30">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 animate-ping [animation-duration:2s]"></div>
-                  <Image src={smileMemoji} alt="Smiling memoji" className="size-20 relative z-40"/>
+                <div className="absolute top-[55%] md:top-[65%] lg:top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 z-30">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 animate-ping [animation-duration:2s]"></div>
+                  <Image
+                    src={smileMemoji}
+                    alt="Smiling memoji"
+                    className="size-20 relative z-40 translate-y-[2px]"
+                  />
                 </div>
               </div>
             </Card>
