@@ -31,13 +31,44 @@ const toolboxItems = [
 
 // Define hobbies with their respective emoji and positioning styles
 const hobbies = [
-  { title: "Singing", emoji: "🎤", positions: "left-[4%] top-[6%] md:left-[7%] md:top-[0%]" },
-  { title: "Kickboxing", emoji: "🥊", positions: "left-[60%] top-[6%] md:left-[48%] md:top-[5%] lg:left-[55%] lg:top-[5%]" },
-  { title: "One Piece", emoji: "😊", positions: "left-[28%] top-[0%] md:left-[30%] md:top-[20%]" },
-  { title: "Gaming", emoji: "🎮", positions: "left-[8%] top-[38%] md:left-[12%] md:top-[35%]" },
-  { title: "Music", emoji: "🎵", positions: "left-[58%] top-[38%] md:left-[56%] md:top-[45%] lg:left-[65%] lg:top-[45%]" },
-  { title: "Fitness", emoji: "💪", positions: "left-[10%] top-[72%] md:left-[20%] md:top-[70%]" },
-  { title: "Grappling", emoji: "🤼", positions: "left-[56%] top-[72%] md:left-[44%] md:top-[70%] lg:left-[50%] lg:top-[70%]" },
+  {
+    title: "Singing",
+    emoji: "🎤",
+    positions: "left-[6%] top-[10%] md:left-[7%] md:top-[0%]",
+  },
+  {
+    title: "Kickboxing",
+    emoji: "🥊",
+    positions:
+      "left-[62%] top-[10%] md:left-[48%] md:top-[5%] lg:left-[55%] lg:top-[5%]",
+  },
+  {
+    title: "One Piece",
+    emoji: "😊",
+    positions: "left-[32%] top-[2%] md:left-[30%] md:top-[20%]",
+  },
+  {
+    title: "Gaming",
+    emoji: "🎮",
+    positions: "left-[2%] top-[38%] md:left-[12%] md:top-[35%]",
+  },
+  {
+    title: "Music",
+    emoji: "🎵",
+    positions:
+      "left-[64%] top-[38%] md:left-[56%] md:top-[45%] lg:left-[65%] lg:top-[45%]",
+  },
+  {
+    title: "Fitness",
+    emoji: "💪",
+    positions: "left-[8%] top-[72%] md:left-[20%] md:top-[70%]",
+  },
+  {
+    title: "Grappling",
+    emoji: "🤼",
+    positions:
+      "left-[62%] top-[72%] md:left-[44%] md:top-[70%] lg:left-[50%] lg:top-[70%]",
+  },
 ];
 
 // About section component
