@@ -34,13 +34,13 @@ const hobbies = [
   {
     title: "Singing",
     emoji: "🎤",
-    positions: "left-[15%] top-[15%] md:left-[7%] md:top-[0%]",
+    positions: "left-[10%] top-[15%] md:left-[7%] md:top-[0%]",
   },
   {
     title: "Kickboxing",
     emoji: "🥊",
     positions:
-      "left-[60%] top-[18%] md:left-[48%] md:top-[5%] lg:left-[55%] lg:top-[5%]",
+      "left-[52%] top-[18%] md:left-[48%] md:top-[5%] lg:left-[55%] lg:top-[5%]",
   },
   {
     title: "One Piece",
@@ -50,7 +50,7 @@ const hobbies = [
   {
     title: "Gaming",
     emoji: "🎮",
-    positions: "left-[22%] top-[40%] md:left-[12%] md:top-[35%]",
+    positions: "left-[18%] top-[40%] md:left-[12%] md:top-[35%]",
   },
   {
     title: "Music",
@@ -61,7 +61,7 @@ const hobbies = [
   {
     title: "Fitness",
     emoji: "💪",
-    positions: "left-[28%] top-[62%] md:left-[20%] md:top-[70%]",
+    positions: "left-[32%] top-[62%] md:left-[20%] md:top-[70%]",
   },
   {
     title: "Grappling",
