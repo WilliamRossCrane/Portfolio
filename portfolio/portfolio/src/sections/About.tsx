@@ -32,12 +32,24 @@ const toolboxItems = [
 // Define hobbies with their respective emoji and positioning styles
 const hobbies = [
   { title: "Singing", emoji: "🎤", positions: "left-[7%] top-[0%]" },
-  { title: "Kickboxing", emoji: "🥊", positions: "left-[55%] top-[5%]" },
+  {
+    title: "Kickboxing",
+    emoji: "🥊",
+    positions: "left-[40%] md:left-[48%] lg:left-[55%] top-[5%]",
+  },
   { title: "One Piece", emoji: "😊", positions: "left-[30%] top-[20%]" },
   { title: "Gaming", emoji: "🎮", positions: "left-[12%] top-[35%]" },
-  { title: "Music", emoji: "🎵", positions: "left-[65%] top-[45%]" },
+  {
+    title: "Music",
+    emoji: "🎵",
+    positions: "left-[48%] md:left-[56%] lg:left-[65%] top-[45%]",
+  },
   { title: "Fitness", emoji: "💪", positions: "left-[20%] top-[70%]" },
-  { title: "Grappling", emoji: "🤼", positions: "left-[50%] top-[70%]" },
+  {
+    title: "Grappling",
+    emoji: "🤼",
+    positions: "left-[35%] md:left-[44%] lg:left-[50%] top-[70%]",
+  },
 ];
 
 // About section component
@@ -102,7 +114,7 @@ export const AboutSection = () => {
                 {hobbies.map((hobby) => (
                   <motion.div
                     key={hobby.title}
-                    className={`inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions} cursor-grab`}
+                    className={`inline-flex items-center gap-2 px-4 md:px-5 lg:px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute ${hobby.positions} cursor-grab`}
                     drag
                     dragConstraints={constrainRef}
                     dragMomentum={false}
