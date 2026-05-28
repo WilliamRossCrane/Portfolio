@@ -25,25 +25,30 @@ const portfolioProjects = [
   {
     company: "Project #2",
     year: "2025",
-    title: "TBD",
+    title: "Bookified",
     results: [
-      { title: "Innovative ideas in development." },
-      { title: "Or at least I'll figure out something." },
-      { title: "Keep an eye out 👀" },
+      { title: "Next.js, TypeScript, Clerk, MongoDB, Vapi" },
+      { title: "AI voice book companion with PDF upload and live transcripts" },
+      {
+        title:
+          "Built to turn static books into interactive voice conversations",
+      },
     ],
-    link: "https://www.youtube.com/watch?v=60Fd9G72sGg",
+    link: "https://bookified-opal.vercel.app/",
     image: lightSaasLandingPage,
   },
   {
     company: "Project #3",
     year: "2025",
-    title: "Uber Clone Application",
+    title: "Sportz Websockets",
     results: [
-      { title: "Expo, TypeScript, Clerk, Stripe, NeonDB" },
-      { title: "Live maps, geolocation, ride booking flow" },
-      { title: "V.1 pending a API/env configuration bug" },
+      { title: "Node.js, Express, MongoDB, WebSockets, Arcjet" },
+      { title: "Real-time sports scores, live commentary, and match updates" },
+      {
+        title: "Built as a scalable broadcast engine with low-latency delivery",
+      },
     ],
-    link: "https://github.com/WilliamRossCrane/uber-clone",
+    link: "https://github.com/WilliamRossCrane/sportz-websockets",
     image: aiStartupLandingPage,
   },
 ];
